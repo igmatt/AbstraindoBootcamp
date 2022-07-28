@@ -1,6 +1,4 @@
-import desafioDominio.Conteudo;
-import desafioDominio.Curso;
-import desafioDominio.Mentoria;
+import desafioDominio.*;
 
 import java.time.LocalDate;
 
@@ -22,11 +20,38 @@ public class Main {
         mentoria.setDescricao("Descrição Mentoria Java");
         mentoria.setData(LocalDate.now());
 
-        System.out.println(curso1);
-        System.out.println(curso2);
+//        System.out.println(curso1);
+//        System.out.println(curso2);
+//        System.out.println(mentoria);
 
-        System.out.println(mentoria);
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descricao Bootcam Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
 
+        Dev devIgor = new Dev();
+        devIgor.setNome("Igor");
+        devIgor.increverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos Igor" + devIgor.getConteudosIncritos());
+        devIgor.progredir();
+        devIgor.progredir();
+        System.out.println("----------------------------------------------------------");
+        System.out.println("Conteúdos Inscritos Igor" + devIgor.getConteudosIncritos());
+        System.out.println("Conteúdos Concluídos Igor" + devIgor.getConteudosConcluidos());
+        System.out.println("XP: " + devIgor.calcularTotalXp());
 
+        System.out.println("\n");
+
+        Dev devGabriela = new Dev();
+        devGabriela.setNome("Gabriela");
+        devGabriela.increverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos Gabriela" + devGabriela.getConteudosIncritos());
+        devGabriela.progredir();
+        System.out.println("----------------------------------------------------------");
+        System.out.println("Conteúdos Inscritos Gabriela" + devGabriela.getConteudosIncritos());
+        System.out.println("Conteúdos Concluídos Igor" + devGabriela.getConteudosConcluidos());
+        System.out.println("XP: " + devGabriela.calcularTotalXp());
     }
 }
