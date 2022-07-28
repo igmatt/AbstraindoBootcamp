@@ -36,22 +36,28 @@ public class Main {
         devIgor.increverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Igor" + devIgor.getConteudosIncritos());
         devIgor.progredir();
-        devIgor.progredir();
-        System.out.println("----------------------------------------------------------");
-        System.out.println("Conteúdos Inscritos Igor" + devIgor.getConteudosIncritos());
-        System.out.println("Conteúdos Concluídos Igor" + devIgor.getConteudosConcluidos());
-        System.out.println("XP: " + devIgor.calcularTotalXp());
-
         System.out.println("\n");
+        System.out.println("Conteúdos Concluídos Igor" + devIgor.getConteudosConcluidos());
+        System.out.println("\n");
+        System.out.println("Conteúdos Inscritos Igor" + devIgor.getConteudosIncritos());
+        devIgor.progredir();
+        System.out.println("\n");
+        System.out.println("Conteúdos Concluídos Igor" + devIgor.getConteudosConcluidos());
+        System.out.println("\n");
+
+        System.out.println("XP Adquirida: " + devIgor.calcularTotalXp());
+
+        System.out.println("----------------------------------------------------------");
 
         Dev devGabriela = new Dev();
         devGabriela.setNome("Gabriela");
         devGabriela.increverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Gabriela" + devGabriela.getConteudosIncritos());
         devGabriela.progredir();
-        System.out.println("----------------------------------------------------------");
+        System.out.println("\n");
+        System.out.println("Conteúdos Concluídos Gabriela" + devGabriela.getConteudosConcluidos());
+        System.out.println("\n");
         System.out.println("Conteúdos Inscritos Gabriela" + devGabriela.getConteudosIncritos());
-        System.out.println("Conteúdos Concluídos Igor" + devGabriela.getConteudosConcluidos());
-        System.out.println("XP: " + devGabriela.calcularTotalXp());
+        System.out.println("XP Adquirida: " + devGabriela.calcularTotalXp());
     }
 }
